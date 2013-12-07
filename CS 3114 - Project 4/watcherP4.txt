@@ -1,0 +1,13 @@
+debug
+add -105.7 -24.3 Riley
+add 21.2 -38.6 Taylor
+debug
+add -11.0 63.1 NevaehHasAReallyReallyReallyLongName
+debug
+debug
+add 10.7 -80.4 John
+debug
+debug
+debug
+debug
+debug
