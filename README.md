@@ -90,8 +90,8 @@ Implementation:
 All operations that traverse or descend the Bintree structure must be implemented recursively.
 The Bintree itself will have its nodes stored in the memory manager's space on disk, and not in main
 memory. This is the primary dierence from Project 2. The nodes will be of variable length, and
-2
-where a node is stored on disk will be determined by the memory manager. When implementing
+
+2. where a node is stored on disk will be determined by the memory manager. When implementing
 the Bintree nodes, access to a node (perhaps you did this in Project 2 by using a \node.getchild()"
 method) will now mean a request to the memory manager to return the node contents from the
 memory pool. Creation or alteration of a node will require writing to the memory pool. From
@@ -139,8 +139,8 @@ length of the entire message).
 Java Code:
 For this project, you may only use standard Java classes, Java code that you have written
 yourself, and Java code supplied by the CS3114 instructor (see the class website for the distribution).
-3
-You may not use other third-party Java code. You may use standard Java list classes for this
+
+3. You may not use other third-party Java code. You may use standard Java list classes for this
 assignment.
 Programming Standards:
 You must conform to good programming/documentation standards. Note that Web-CAT will
@@ -172,59 +172,5 @@ You may only use code you have written, either specically for this project or f
 grams, or the codebase provided by the instructor. Note that the textbook code is not designed
 for the specic purpose of this assignment, and is therefore likely to require modication. It may,
 however, provide a useful starting point.
-Deliverables:
-You will submit your project through the automated Web-CAT server. Links to the Web-CAT
-client are posted at the class website. If you make multiple submissions, only your last submission
-will be evaluated. There is no limit to the number of submissions that you may make.
-4
-You are required to submit your own test cases with your program, and part of your grade will
-be determined by how well your test cases test your program, as dened by Web-CAT's evaluation
-of code coverage. Of course, your program must pass your own test cases. Part of your grade will
-also be determined by test cases that are provided by the graders. Web-CAT will report to you
-which test les have passed correctly, and which have not. Note that you will not be given a copy
-of grader's test les, only a brief description of what each accomplished in order to guide your own
-testing process in case you did not pass one of our tests.
-When structuring the source les of your project (be it in Eclipse as a \Managed Java Project,"
-or in another environment), use a 
-at directory structure; that is, your source les will all be
-contained in the project root. Any subdirectories in the project will be ignored. If you used a
-makele to compile your code, or otherwise did something that won't automatically compile in
-Eclipse, be sure to include any necessary les or instructions so that the TAs can compile it.
-If submitting through Eclipse, the format of the submitted archive will be managed for you. If
-you choose not to develop in Eclipse, you will submit either a ZIP-compressed archive (compatible
-with Windows ZIP tools or the Unix zip command) or else a tar'ed and gzip'ed archive. Either
-way, your archive should contain all of the source code for the project, along with any les or
-instructions necessary to compile the code. If you need to explain any pertinent information to aid
-the TA in the grading of your project, you may include an optional \readme" le in your submitted
-archive.
-You are permitted (and ecouraged) to work with a partner on this project. When you work with
-a partner, then only one member of the pair will make a submission. Be sure both names are
-included in the documentation. Whatever is the nal submission from either of the pair members
-is what we will grade unless you arrange otherwise with the GTA.
-Pledge:
-Your project submission must include a statement, pledging your conformance to the Honor
-Code requirements for this course. Specically, you must include the following pledge statement
-near the beginning of the le containing the function main() in your program. The text of the
-pledge will also be posted online.
-// On my honor:
-//
-// - I have not used source code obtained from another student,
-// or any other unauthorized source, either modified or
-// unmodified.
-//
-// - All source code and documentation used in my program is
-// either my original work, or was derived by me from the
-// source code published in the textbook for this course.
-//
-// - I have not discussed coding details about this project with
-// anyone other than my partner (in the case of a joint
-// submission), instructor, ACM/UPE tutors or the TAs assigned
-// to this course. I understand that I may discuss the concepts
-// of this program with other students, and that another student
-// may help me debug my program so long as neither of us writes
-5
-// anything during the discussion or modifies any computer file
-// during the discussion. I have violated neither the spirit nor
-// letter of this restriction.
-Programs that do not contain this pledge will not be graded.
-6
+
+
