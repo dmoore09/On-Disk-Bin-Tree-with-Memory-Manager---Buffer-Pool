@@ -11,14 +11,16 @@ Please note that this assignment is worth more than the others. It is not intend
 assignment be more dicult than the others. Rather, this should be an opportunity to make up
 for any past problems. However, the more defects that were in your prior projects, the more work
 you will have now.
-In this project, you will re-implement a Bintree for storing watcher records from Project 2,
+
+  In this project, you will re-implement a Bintree for storing watcher records from Project 2,
 where this Bintree is stored in a disk le. The context will be a simplied version of Project 2,
 in that there will be no earthquake service. There will simply be a series of commands to process
 (similar to Project 2'sWatcher service in principle). The main operations will be inserting watchers,
 deleting watchers, locating all watchers within a certain distance of a search point, and outputting
 a traversal of the Bintree for debugging purposes. There will be no heap and no BST for this
 project.
-While the functionality on the Bintree is roughly the same as in Project 2, this time the Bintree
+
+  While the functionality on the Bintree is roughly the same as in Project 2, this time the Bintree
 and its Watcher records will reside on disk. A buer pool (using the LRU replacement strategy)
 will mediate access to the disk le, and a memory manager will decide where in the disk le to store
 the Bintree nodes as well as the Watcher records. Another way to look at this project: You will
@@ -27,6 +29,7 @@ nodes and watcher recrods in the memory manager's array. The memory manager's ar
 a disk le, and so you will use a buer pool to manage the disk I/O.
 You should read the OpenDSA Memory Management chapter to prepare for implementing this
 project.
+
 Input and Output:
 The program will be invoked from the command-line as:
 java DiskBintree <command-file-name> <numb-buffers> <buffersize>
@@ -36,7 +39,8 @@ not use the WatcherFile interface. The <numb-buffers> parameter is the number of
 buer pool, and will be in the range 1{20. Parameter <buffersize> is the size of a buer in the
 buer pool (and therefore determines the amount of information read/written on each disk I/O
 operation).
-You will need to create and maintain a disk le which stores the memory manager's array. The
+
+  You will need to create and maintain a disk le which stores the memory manager's array. The
 buer pool acts as the intermediary for this le. The name of this disk le must be \p4bin.dat".
 After completing all commands in the input le, all unwritten blocks in the buer pool should be
 written to disk, and \p4bin.dat" should be closed, not deleted.
@@ -44,8 +48,8 @@ Your buer pool should need only three changes from Project 3. First, the size f
 is determined by the command line parameter. Second, since the data entities stored on disk are of
 variable size (diererent tree node types, and the Watcher records contain a variable-length string),
 your buer pool must be able to handle storing messages that span block boundaries, or that might
-1
-even span multiple blocks. Third, you need to be careful not to read in blocks from the le that
+
+1. even span multiple blocks. Third, you need to be careful not to read in blocks from the le that
 do not yet exist. This can happen when the memory manager decides to \grow" the size of its
 memory pool (and therefore directs the buer pool to write a message to a part of the le that
 does not yet exist). le that does not yet
@@ -53,8 +57,7 @@ The command le will contain a series of commands (some with associated paramete
 rated by spaces), one command for each line. The commands will be read from the le given in
 command line parameter 1, and the output from the command will be written to standard output.
 The format and interpretation for the commands will be similar Project 2, but there are some
-dierences.
-add <x> <y> <name>
+dierences. add <x> <y> <name>
 Adds a watcher record to the bintree. As in Projects 1 and 2, the X and Y coordinates are
 longitude and latitude, respectively, and so range between (-180, 180) and (-90, 90), resprectively.
 On successfully adding a record, your program should print
